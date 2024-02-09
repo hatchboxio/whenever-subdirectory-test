@@ -18,6 +18,9 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
-#
-command "echo 'you can use raw cron syntax too'"
 
+set :output, "/home/deploy/cron.log"
+
+every 1.minute do
+  command "date"
+end
